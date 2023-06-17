@@ -1,0 +1,61 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 60px; /* Adjust the value as needed to create space between the cards and the footer */
+
+  }
+  .content-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+/* Small devices (landscape phones) */
+@media (max-width: 576px) {
+  .home-container {
+    margin-bottom: 30px;
+  }
+}
+
+/* Small devices (portrait phones) */
+@media (max-width: 576px) and (orientation: portrait) {
+  .home-container {
+    margin-bottom: 50px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .home-container {
+    margin-bottom: 80px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .home-container {
+    margin-bottom: 100px;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .home-container {
+    margin-bottom: 120px;
+  }
+}
+
+/* Extra large devices (extra large desktops) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .home-container {
+    margin-bottom: 140px;
+  }
+}
+
+/* Extra large devices (extra extra large desktops) */
+@media (min-width: 1400px) {
+  .home-container {
+    margin-bottom: 160px;
+  }
+}

@@ -1,0 +1,80 @@
+
+.mission-container {
+    margin: 50px;
+    padding-bottom: 150px; /* Increase the padding to create space for the footer */
+    text-align: center;
+  }
+  .mission-heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .mission-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .mission-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .mission-list-item {
+    flex: 0 0 300px;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .list-text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  .stuff {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  
+  .mission-section-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .mission-section-content {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .mission-section-content li {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .mission-timings {
+    flex: 0 0 300px;
+  }
+  
+  .mission-locations {
+    flex: 0 0 300px;
+  }
+  

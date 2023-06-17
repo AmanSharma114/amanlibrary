@@ -1,0 +1,134 @@
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8); /* Update background color and transparency */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay-inner {
+    background: white;
+    width: 700px;
+    max-width: 90%; /* Add max-width to make it responsive */
+    height: auto; /* Change height to auto */
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1.3rem;
+    border-radius: 5px;
+  }
+  
+  .overlay-inner .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    background-color:rgb(0, 0, 0);
+    color: rgb(255, 248, 248); /* Update close button color */
+    cursor: pointer;
+  }
+
+  .overlay-inner .close:hover {
+    background-color: rgb(119, 56, 191); /* Update close button background color on hover */
+    color: rgb(0, 0, 0); /* Update close button text color on hover */
+  }
+  
+  
+  .overlay-inner .inner-box {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .overlay-inner .inner-box img {
+    margin-right: 20px;
+    width: 150px;
+    height: 200px;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
+    border-radius: 5px;
+  }
+  
+  .overlay-inner .inner-box h3 {
+    margin-top: 10px;
+    color: green;
+  }
+  
+  .overlay-inner .inner-box h4 {
+    color: blue;
+  }
+  
+  .overlay-inner .inner-box button {
+    outline: none;
+    border: none;
+    width: auto;
+    border-radius: 8px;
+    background-color: #24a0ed;
+    color: rgb(50, 24, 24);
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .overlay-inner .description {
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 13px;
+  }
+  @media (max-width: 576px) {
+    .overlay-inner {
+      width: 90%;
+    }
+  }
+  
+  /* Small devices (portrait phones) */
+  @media (max-width: 576px) and (orientation: portrait) {
+    .overlay-inner {
+      width: 90%;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 576px) and (max-width: 768px) {
+    .overlay-inner {
+      width: 500px;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    .overlay-inner {
+      width: 600px;
+    }
+  }
+  
+  /* Extra large devices (large desktops) */
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .overlay-inner {
+      width: 700px;
+    }
+  }
+  
+  /* Extra large devices (extra large desktops) */
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    .overlay-inner {
+      width: 800px;
+    }
+  }
+  
+  /* Extra large devices (extra extra large desktops) */
+  @media (min-width: 1400px) {
+    .overlay-inner {
+      width: 900px;
+    }
+  }

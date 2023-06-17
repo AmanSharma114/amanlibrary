@@ -1,0 +1,127 @@
+/* about.css */
+.portfolio-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #705ed8;
+    color: #0d0808;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s, cursor 0.3s;
+    font-style: oblique;
+
+  }
+  
+  .portfolio-link:hover {
+    background-color: #000000;
+    color: #f9fbff;
+    cursor: pointer;
+  }
+  .portfolio-text{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 700;
+  }
+  
+
+.about-container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 40px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333333;
+    text-align: center;
+  }
+  
+  .services-container {
+    margin-bottom: 40px;
+  }
+  
+  .services-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .service-card {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .service-icon {
+    width: 60px;
+    margin-right: 20px;
+  }
+  
+  .service-icon img {
+    max-width: 100%;
+  }
+  
+  .service-content {
+    flex: 1;
+  }
+  
+  .service-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    color: #666666;
+  }
+  
+  .about-content {
+    margin-bottom: 40px;
+  }
+  
+  .about-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .about-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666666;
+    text-align: justify;
+  }
+  
+  .about-contact {
+    margin-bottom: 40px;
+  }
+  
+  .about-contact-info {
+    font-size: 16px;
+    color: #666666;
+  }
+  
+  .about-contact-info p {
+    margin: 5px 0;
+  }
+  

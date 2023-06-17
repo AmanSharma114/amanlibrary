@@ -1,0 +1,413 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.suggestionsContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 10px;
+  
+}
+
+.filterContainer {
+  margin-right: 10px;
+}
+
+.filterSelect {
+  margin-bottom: 5px;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.searchInput {
+  width: 300px;
+  margin-right: 10px;
+}
+
+.searchButton {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+}
+
+.suggestionsList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+  position: absolute;
+  background-color: #000000;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin-top: 2px;
+  margin-left: 50px;
+}
+
+.suggestionItem {
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.suggestionItem:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.suggestionItem:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.suggestionItem:hover {
+  background-color: #8dafe3;
+  color: #040405;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.searchResults {
+  position: absolute; /* Change position to relative */
+  z-index: 2;
+  top: 100%; /* Position the cards below the search section */
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  /* border-radius: 20px; */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 5px; /* Add margin to create space between the search section and the results */
+  margin-bottom: 20px; /* Add margin for the footer */
+}
+
+.searchResults .bookstyle{
+  font-weight: 900;
+  color: aqua;
+  font-style: oblique;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.searchSection {
+  background-image: url('../img/main3.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  text-align: center;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  position: relative;
+}
+
+.noresult{
+  font-size: 20px;
+  color:whitesmoke;
+  font-weight: 600;
+}
+
+.loadingSpinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.loadingSpinner svg {
+  font-size: 3rem; /* Increase the font size to make the spinner larger */
+  color: #007bff; /* Customize the color of the spinner */
+  animation: spin 2s linear infinite; /* Add a spinning animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadMoreButton {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #0056b3;
+}
+
+.loadMoreButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.searchHeading {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: rgb(253, 253, 253);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.searchBar {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added */
+}
+
+.searchInput {
+  overflow: visible;
+  width: 400px;
+  padding-left: 40px;
+  padding-top: 12px; /* Increased padding for better visibility */
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-size: 18px; /* Increased font size for better visibility */
+  font-family: sans-serif;
+  font-weight: 500;
+  color: #0a0606;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.searchInput:focus {
+  outline: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.searchButton {
+  width: 60px; /* Increased button size for better visibility */
+  height: 40px; /* Increased button size for better visibility */
+  margin-left: 10px; /* Adjusted margin for better alignment */
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(58, 247, 118, 0.1);
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+  transform: scale(1.1);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.filteringLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterSelect {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fdfdfe;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  color: #0b0909;
+  outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.filterSelect:hover {
+  background-color: #88ade9;
+}
+
+.filterSelect:focus {
+  background-color: #d9d9d9;
+}
+
+.filterSelect option {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
+
+/* Custom Styling for the Select Arrow */
+.filterSelect:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #666666;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transform: translateY(-50%);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.filterSelect:hover:after {
+  border-top-color: #333333;
+}
+
+.filterSelect:focus:after {
+  border-top-color: #000000;
+}
+
+
+
+
+@media (max-width: 576px) {
+  .searchSection {
+    padding: 20px 0; /* Decrease the padding for small devices */
+    min-height: 40vh; /* Decrease the min-height for small devices */
+  }
+
+  .searchHeading {
+    font-size: 2.2rem; /* Decrease the font size for small devices */
+  }
+
+  .searchInput {
+    width: 180px; /* Decrease the width for small devices */
+    padding-left: 20px; /* Decrease the padding for small devices */
+    padding-top: 8px; /* Decrease the padding for small devices */
+    font-size: 12px; /* Decrease the font size for small devices */
+  }
+
+  .searchButton {
+    width: 30px; /* Decrease button size for small devices */
+    height: 24px; /* Decrease button size for small devices */
+    font-size: 12px; /* Decrease the font size for small devices */
+  }
+
+  .filterSelect {
+    margin: 0 5px;
+    padding: 6px;
+    font-size: 12px; /* Decrease the font size for small devices */
+  }
+
+  .filterSelect:after {
+    top: 40%; /* Adjusted position for small devices */
+    border-top: 4px solid #666666; /* Decrease the border size for small devices */
+  }
+}
+
+@media (max-width: 391px) and (max-height: 845px) {
+  .header {
+    padding: 5px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header.small {
+    height: 40px;
+  }
+
+  .suggestionsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filterContainer {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+
+  .filterSelect {
+    width: 100%;
+    max-width: 200px;
+    margin-right: 0px;
+  }
+
+  .searchBarContainer {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .searchInput {
+    padding-left: 30px;
+    font-size: 16px;
+    padding-top: 8px;
+    height: 30px;
+  }
+
+  .searchButton {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .suggestionsList {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .suggestionItem {
+    font-size: 7px;
+    padding: 2px;
+  }
+
+  /* Adjustments for search section */
+  .searchSection {
+    padding: 40px 0; /* Decrease the padding for small devices */
+    min-height: 60vh; /* Decrease the min-height for small devices */
+  }
+
+  .searchHeading {
+    font-size: 2.2rem; /* Decrease the font size for small devices */
+    margin-bottom: 10px; /* Adjust the margin for small devices */
+  }
+
+  .searchInput {
+    width: 180px; /* Decrease the width for small devices */
+    padding-left: 20px; /* Decrease the padding for small devices */
+    padding-top: 8px; /* Decrease the padding for small devices */
+    font-size: 12px; /* Decrease the font size for small devices */
+  }
+
+  .searchButton {
+    width: 30px; /* Decrease button size for small devices */
+    height: 24px; /* Decrease button size for small devices */
+    font-size: 12px; /* Decrease the font size for small devices */
+  }
+}
+
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .searchHeading {
+    font-size: 3.8rem;
+  }
+
+  .searchInput {
+    width: 300px;
+  }
+}
+
+
+
